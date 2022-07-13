@@ -3,35 +3,13 @@
     <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
-      <x:String>System.IO</x:String>
-      <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities</x:String>
-      <x:String>UiPath.Platform.ObjectLibrary</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -68,7 +46,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Sorting Annual Reports WorkFlow" sap:VirtualizedContainerService.HintSize="392.666666666667,1245.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -89,71 +66,41 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="350.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Robot has started&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set the global variables of the project" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Modules\Project_GlobalVariables.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strGithubRepoURL">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="configStrGithubRepoURL" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strDownloadsFolderPath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="configStrDownloadsFolderPath" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strProjectFolderPath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="configStrProjectFolderPath" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strSortedFolderPath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="configStrSortedFolderPath" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strDestinationFolder">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="configStrDestinationFolder" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strGithubRepoURL">[configStrGithubRepoURL]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strDownloadsFolderPath">[configStrDownloadsFolderPath]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strProjectFolderPath">[configStrProjectFolderPath]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strSortedFolderPath">[configStrSortedFolderPath]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strDestinationFolder">[configStrDestinationFolder]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Change the default downloads folder of Edge" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Modules\Edge_ChangeDownloadsFolder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strDownloadsFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrDownloadsFolderPath" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strDownloadsFolder">[configStrDownloadsFolderPath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Download the Github repo" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Modules\Github_DownloadRepo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strRepoURL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrGithubRepoURL" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strDownloadsFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrDownloadsFolderPath" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strZipRepoFilePath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strZipRepoFilePath" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strRepoURL">[configStrGithubRepoURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strDownloadsFolder">[configStrDownloadsFolderPath]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strZipRepoFilePath">[strZipRepoFilePath]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract the downloaded zip file" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Modules\ZipFile_Extract.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strZipFilePath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strZipRepoFilePath" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strDestinationFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrDestinationFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strZipFilePath">[strZipRepoFilePath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strDestinationFolder">[configStrDestinationFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get all the pdf and xlsx files into a list" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Modules\Generic_ListofAllFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strFolderPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrDestinationFolder" />
-        </InArgument>
-        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_lstFilesList">
-          <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="lstFilesList" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strFolderPath">[configStrDestinationFolder]</InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_lstFilesList">[lstFilesList]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sort all the reports files" sap:VirtualizedContainerService.HintSize="350.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Modules\Generic_SortFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_lstFilesList">
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="lstFilesList" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strSortedFolderPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configStrSortedFolderPath" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_lstFilesList">[lstFilesList]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strSortedFolderPath">[configStrSortedFolderPath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="350.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Robot has finished&quot;]" />

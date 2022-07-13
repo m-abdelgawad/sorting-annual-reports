@@ -12,25 +12,12 @@
     <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
-      <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
@@ -72,7 +59,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Sort all the input reports into folders based on the year in their filenames.&#xA;Pre-Condition: A list of strings that contains the paths of files should be provided to the workflow.&#xA;Post-Action: All input files will be sorted based on the following citria:&#xD;&#xA;If the file name follows the format of “CustomerName_Report_DDMMYYYY.xlsx/.pdf”, it will be sorted this into a folder based on the year (YYYY). For example, for a file named “JaneDoe_Report_28102019.pdf”:&#xD;&#xA;if there is no folder named &quot;2019&quot;, it will be created and then moving the file to the new folder&#xD;&#xA;if there is already a folder named &quot;2019&quot;, the file will be moved to the existing folder.&#xD;&#xA;If any of the file(s) is/are not in the “CustomerName_Report_DDMMYYYY.xlsx/.pdf” format, then the Robot will create a new folder with today’s date (format MMDDYYYY) and move them there." DisplayName="Sort the files in the input list of files" sap:VirtualizedContainerService.HintSize="1118.66666666667,2373.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Sort all the input reports into folders based on the year in their filenames.&#xA;Pre-Condition: A list of strings that contains the paths of files should be provided to the workflow.&#xA;Post-Action: All input files will be sorted based on the following citria:&#xA;If the file name follows the format of “CustomerName_Report_DDMMYYYY.xlsx/.pdf”, it will be sorted this into a folder based on the year (YYYY). For example, for a file named “JaneDoe_Report_28102019.pdf”:&#xA;if there is no folder named &quot;2019&quot;, it will be created and then moving the file to the new folder&#xA;if there is already a folder named &quot;2019&quot;, the file will be moved to the existing folder.&#xA;If any of the file(s) is/are not in the “CustomerName_Report_DDMMYYYY.xlsx/.pdf” format, then the Robot will create a new folder with today’s date (format MMDDYYYY) and move them there." DisplayName="Sort the files in the input list of files" sap:VirtualizedContainerService.HintSize="1118.66666666667,2373.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Generic_SortFiles" Name="strComponentName" />
     </Sequence.Variables>
