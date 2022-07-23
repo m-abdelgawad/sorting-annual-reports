@@ -8,9 +8,6 @@ This project involves navigating to a webpage and downloading a zip file to sort
 1. For each file in the folder that follows this naming convention “CustomerName_Report_DDMMYYYY.xlsx/.pdf”, The bot creates a folder named “YYYY”(Date format) depending on the last four characters of the file name, which denotes the year in the “YYYY”(date format). For example, if the file name is “Heba_Report_13072019.pdf” then creates a folder with the name “2019” and moves the file into this folder.
 2. If any of the files don't follow the naming convention, then the bot creates a new folder with today’s date (format MMDDYYYY) and moves them there.
 
-## Video Preview
-[![Sorting Annual Reports Project Video Preview](git_screenshots/robot_preview.PNG)](https://youtu.be/DmgO6HbdXDM "Sorting Annual Reports Project Video Preview")
-
 ## Workflows Screenshots
 
 ### Main Workflow
