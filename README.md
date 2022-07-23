@@ -1,4 +1,4 @@
-# Sorting Annual Reports RPA Robot with UiPath
+# Sorting Annual Reports || RPA Robot with UiPath
 
 ## Project Overview
 In this Sorting Annual Reports project, I've developed an automation for a process that sorts files in a given folder into subfolders based on the date in the file name.
