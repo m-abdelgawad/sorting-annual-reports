@@ -12,7 +12,7 @@ This project involves navigating to a webpage and downloading a zip file to sort
 
 This project was a milestone in my journey to study the RPA Developer With UiPath Nanodegree provided by Udacity.
 
-[![RPA Developer With UiPath Nanodegree by Udacity](git_screenshots/RPA-Developer-With-UiPath-Nanodegree.png)](https://confirm.udacity.com/JVFFYTKPJ "RPA Developer With UiPath Nanodegree by Udacity")
+[![RPA Developer With UiPath Nanodegree by Udacity](git_screenshots/RPA-Developer-With-UiPath-Nanodegree.png)](https://confirm.udacity.com/JVFFYTKP "RPA Developer With UiPath Nanodegree by Udacity")
 
 ## Workflows Screenshots
 
